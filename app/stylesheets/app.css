@@ -475,9 +475,11 @@ a.disabled {
 #notes-column .infinite-scroll, .notes .infinite-scroll {
   overflow-x: hidden;
   height: inherit;
+}
+.windows-web #notes-column .infinite-scroll, .windows-desktop #notes-column .infinite-scroll, .windows-web .notes .infinite-scroll, .windows-desktop .notes .infinite-scroll {
   overflow-y: hidden;
 }
-#notes-column .infinite-scroll:hover, .notes .infinite-scroll:hover {
+.windows-web #notes-column .infinite-scroll:hover, .windows-desktop #notes-column .infinite-scroll:hover, .windows-web .notes .infinite-scroll:hover, .windows-desktop .notes .infinite-scroll:hover {
   overflow-y: scroll;
 }
 #notes-column .note, .notes .note {
@@ -585,7 +587,7 @@ a.disabled {
   text-align: right;
   color: rgba(0, 0, 0, 0.23);
 }
-#editor-title-bar #save-status .error {
+#editor-title-bar #save-status.error, #editor-title-bar #save-status .error {
   color: #f6a200;
 }
 #editor-title-bar .editor-tags {
@@ -685,6 +687,11 @@ a.disabled {
   font-size: 16px;
 }
 
+#item-preview-modal > .content {
+  width: 800px;
+  height: 500px;
+}
+
 .panel {
   background-color: var(--main-background);
 }
@@ -754,6 +761,7 @@ a.disabled {
 .component-view {
   flex-grow: 1;
   display: flex;
+  flex-direction: column;
   overflow-y: auto;
 }
 .component-view .sn-component {
@@ -814,6 +822,9 @@ a.disabled {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
+.sn-component .app-bar.no-top-edge {
+  border-top: 0;
+}
 
 .panel {
   color: var(--main-letter);
@@ -829,6 +840,10 @@ a.disabled {
 }
 .panel a {
   color: var(--highlight);
+}
+
+#session-history-menu .menu-panel .row .sublabel.opaque {
+  opacity: 1;
 }
 
 /*!
